@@ -49,7 +49,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: 0.9rem 2rem;
   background: white;
   border-bottom: 1px solid var(--nm-border);
   position: sticky;
@@ -69,11 +69,24 @@ body {
   color: var(--nm-teal);
 }
 
-.header-tagline {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 0.9rem;
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.header-nav a {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
   color: var(--nm-text-light);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: var(--nm-teal);
 }
 
 /* ── Hero ────────────────────── */
@@ -324,9 +337,9 @@ body {
 }
 
 .challenge-card p {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--nm-text-light);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 /* ── HubSpot Value (Unified/Easy/Fast) ── */
@@ -1002,7 +1015,16 @@ body {
 <!-- Header -->
 <header class="header">
   <div class="header-logo">BBD <span>Boom</span></div>
-  <div class="header-tagline">Explore your possibilities of tomorrow, today</div>
+  <nav class="header-nav">
+    <a href="#client">Client</a>
+    <a href="#experience">Experience</a>
+    <a href="#challenges">Challenges</a>
+    <a href="#solution">Solution</a>
+    <a href="#platform">Platform Fit</a>
+    <a href="#outcomes">Outcomes</a>
+    <a href="#approach">Approach</a>
+    <a href="#next">Next Steps</a>
+  </nav>
 </header>
 
 <!-- Hero -->
@@ -1015,7 +1037,7 @@ body {
 </section>
 
 <!-- The Client (concise) -->
-<section class="section client-section">
+<section id="client" class="section client-section">
   <div class="container">
     <div class="section-label">The Client</div>
     <h2 class="section-heading">Newmarket Holidays</h2>
@@ -1044,7 +1066,7 @@ body {
 </section>
 
 <!-- Travel Clients (moved up) -->
-<section class="section experience-section">
+<section id="experience" class="section experience-section">
   <div class="container">
     <div class="section-label">Relevant Experience</div>
     <h2 class="section-heading">Our Travel &amp; Tour Operator Clients</h2>
@@ -1069,32 +1091,12 @@ body {
         <h4>Martin Randall Travel</h4>
         <p>CRM evaluation and scoping for cultural and luxury escorted tour operator.</p>
       </div>
-      <div class="exp-card">
-        <div class="exp-tag">Safari &amp; Adventure</div>
-        <h4>ARP Africa Travel</h4>
-        <p>HubSpot CRM demo and proposal for specialist African safari and adventure tour operator.</p>
-      </div>
-      <div class="exp-card">
-        <div class="exp-tag">Corporate Travel</div>
-        <h4>EV Style Travel</h4>
-        <p>Active HubSpot client &mdash; CRM and marketing automation for luxury event and destination management.</p>
-      </div>
-      <div class="exp-card">
-        <div class="exp-tag">Corporate Travel</div>
-        <h4>Gray Dawes Travel</h4>
-        <p>Enterprise travel management group &mdash; HubSpot evaluation and sales enablement.</p>
-      </div>
-      <div class="exp-card">
-        <div class="exp-tag">Golf &amp; Leisure</div>
-        <h4>Your Golf Travel</h4>
-        <p>HubSpot CRM for Europe's largest golf travel company &mdash; specialist B2C and B2B operations.</p>
-      </div>
     </div>
   </div>
 </section>
 
 <!-- Challenges -->
-<section class="section challenges-section">
+<section id="challenges" class="section challenges-section">
   <div class="container">
     <div class="section-label">The Challenge</div>
     <h2 class="section-heading">What's Holding Newmarket Back</h2>
@@ -1102,29 +1104,24 @@ body {
       <div class="challenge-card">
         <div class="challenge-num">01</div>
         <h3>No Single Customer View</h3>
-        <p>Customer interactions are fragmented across Tiger Bay's booking system and manual workarounds. There is no unified record that captures bookings, enquiries, marketing engagement, complaints, and preferences in one place.</p>
+        <p>Customer interactions are fragmented across Tiger Bay and manual workarounds. No unified record of bookings, enquiries, marketing engagement, complaints, and preferences.</p>
       </div>
       <div class="challenge-card">
         <div class="challenge-num">02</div>
-        <h3>Rigid Back-Office System</h3>
-        <p>Tiger Bay cannot support the "Flex" model &mdash; pre- and post-tour extensions that customers increasingly expect. A marketing director's own family recently booked with a competitor because the system couldn't handle a simple pre-tour stopover.</p>
+        <h3>Manual Marketing &amp; Comms</h3>
+        <p>Customer communications rely on manual processes. Flight change notifications, upsell campaigns, and post-booking engagement are difficult to execute at scale.</p>
       </div>
       <div class="challenge-card">
         <div class="challenge-num">03</div>
-        <h3>Manual Marketing &amp; Comms</h3>
-        <p>Without modern automation, customer communications rely on manual processes. Flight change notifications, upsell campaigns, and post-booking engagement are difficult to execute at scale &mdash; particularly with AI-powered personalisation.</p>
-      </div>
-      <div class="challenge-card">
-        <div class="challenge-num">04</div>
         <h3>Siloed Operational Workflows</h3>
-        <p>Customer Operations relies on Tiger Bay "categories" for task queues such as cancellations and amendments. These lack the flexibility of modern workflow engines, creating bottlenecks and manual handoffs across teams.</p>
+        <p>Tiger Bay's rigid "categories" and back-office constraints create bottlenecks across cancellations, amendments, and service requests &mdash; and can't support the "Flex" model.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HubSpot = Unified. Easy. Fast. -->
-<section class="section hubspot-value-section">
+<section id="solution" class="section hubspot-value-section">
   <div class="container">
     <div class="section-label">The Solution</div>
     <h2 class="section-heading">HubSpot = Unified. Easy. Fast.</h2>
@@ -1158,7 +1155,7 @@ body {
 </section>
 
 <!-- Why HubSpot Fits Newmarket -->
-<section class="section hubspot-fit-section">
+<section id="platform" class="section hubspot-fit-section">
   <div class="container">
     <div class="section-label">Platform Fit</div>
     <h2 class="section-heading">Why HubSpot Fits Newmarket</h2>
@@ -1215,7 +1212,7 @@ body {
 </section>
 
 <!-- Desired Outcomes -->
-<section class="section outcomes-section">
+<section id="outcomes" class="section outcomes-section">
   <div class="container">
     <div class="section-label">Desired Outcomes</div>
     <h2 class="section-heading">What Success Looks Like</h2>
@@ -1268,7 +1265,7 @@ body {
 </section>
 
 <!-- Three Implementation Paths -->
-<section class="section impl-section">
+<section id="approach" class="section impl-section">
   <div class="container">
     <div class="section-label">Implementation Approach</div>
     <h2 class="section-heading">Three Proven Paths</h2>
@@ -1407,7 +1404,7 @@ body {
 </section>
 
 <!-- Next Steps -->
-<section class="section next-section">
+<section id="next" class="section next-section">
   <div class="container">
     <div class="section-label">Next Steps</div>
     <h2 class="section-heading">How to Move Forward</h2>
